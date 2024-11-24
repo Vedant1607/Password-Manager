@@ -43,23 +43,45 @@ email_input.insert(0, "your_email@example.com")
 
 ## Usage
 
-1. Run the application:
-   ```bash
-   python main.py
-   ```
-2. The application window will open:
-   - Enter the website name, email address, and generate a password.
-   - Save the data by clicking the "Add" button.
+### Saving a Password
+1. Enter the **Website**, **Email**, and **Password** fields.
+   - Use the "Generate Password" button to create a strong password.
+2. Click the **Add** button to save the data.
+   - The data will be saved in `data.json` in the following format:
+     ```json
+     {
+       "example.com": {
+         "Email": "user@example.com",
+         "Password": "securepassword123"
+       }
+     }
+     ```
 
-3. Passwords are saved in the `data.txt` file in the following format:
-   ```
-   Website | Email | Password
+### Searching for a Password
+1. Enter the **Website** name in the **Website** field.
+2. Click the **Search** button to look up the saved password for that website.
+   - If the password exists, it will display the email and password.
+   - If the website is not found or the `data.json` file does not exist, an error message will be shown.
+
+
+### Pre-Filling Default Email
+To customize the default email, update the following line in the code (Line 88):
+```python
+email_input.insert(0, "your_email@example.com")
+
+### Handling Missing Files
+If the `data.json` file does not exist, the program will automatically create one when you save data. If the file is missing while trying to read or search for passwords, the following behavior occurs:
+
+1. **Saving Data**:
+   - If the `data.json` file doesn't exist, the program creates it and writes the new password data to it.
+2. **Searching for Password**:
+   - If the `data.json` file doesn't exist, an error message will be displayed:
    ```
 
 ## Files
 
 - **main.py**: The main script for the application.
-- **data.txt**: Stores the saved passwords.
+- **data.json**: Stores the saved passwords in a JSON format.
 - **logo.png**: Logo displayed in the application.
 
 ## License
