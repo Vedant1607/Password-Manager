@@ -2,5 +2,17 @@
     "instagram": {
         "Email": "your_email@example.com",
         "Password": "Oc(WQk18!bunrq"
+    },
+    "amazon": {
+        "Email": "your_email@example.com",
+        "Password": "r!S1&l3P!1FwS(t"
+    },
+    "uber": {
+        "Email": "your_email@example.com",
+        "Password": "6hR%e4(wd7vma9"
+    },
+    "flipkart": {
+        "Email": "your_email@example.com",
+        "Password": "%54Da!p!vvoEV3j"
     }
 }

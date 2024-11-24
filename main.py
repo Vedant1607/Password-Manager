@@ -52,7 +52,7 @@ def save_data():
             else:
                 data.update(data_dict)
                 with open("data.json","w") as data_file:
-                    json.dump(data_dict, data_file, indent=4)
+                    json.dump(data, data_file, indent=4)
             finally:
                 # Clear the input fields after saving
                 website_input.delete(0,END)
