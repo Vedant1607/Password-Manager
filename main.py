@@ -58,7 +58,7 @@ def save_data():
                 website_input.delete(0,END)
                 password_input.delete(0,END)
 
-# Find to find password in data file
+# Function to find password in data file
 def find_password():
     user_website = website_input.get()
     
